@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Podaj wartosci:" << endl;
+
+    int wielkosc_tablicy = 2;
+    float *tablica;
+
+    tablica = new float [wielkosc_tablicy];
+
+    int i = -1;
+
+    do
+    {
+        wielkosc_tablicy++;
+        i++;
+        cin >> tablica[i];
+    }while(tablica[i]!=0);
+
+    cout << "Wartosci w tablicy:" << endl;
+
+    for(int j = 0; j <= wielkosc_tablicy-3; j++)
+    {
+        cout << tablica[j] << endl;
+    }
+
+    delete []  tablica;
+
+    cout << "Hello world!" << endl;
+    return 0;
+}

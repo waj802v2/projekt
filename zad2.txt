@@ -1,0 +1,74 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int ilosc = 0;
+    int wyniki[5][10];
+    string nazwa_uzytkownika[5];
+    for(int j = 0; j < 5; j++)
+    {
+        cout << "Podaj nazwe uzytkownika:" << endl;
+        cin >> nazwa_uzytkownika[ilosc];
+        cout << "Podaj swoje wyniki:" << endl;
+        for(int i = 0; i < 10; i++)
+        {
+            cin >> wyniki[ilosc][i];
+        }
+
+        cout << nazwa_uzytkownika[ilosc] << endl;
+        for(int i = 0; i < 10; i++)
+        {
+            cout << wyniki[ilosc][i] << endl;
+        }
+        ilosc++;
+    }
+
+    string wys_wyniki;
+
+    cout << "Chce wyswietlic wyniki uzytkownika o nazwie:";
+    cin >> wys_wyniki;
+
+    if(nazwa_uzytkownika[0]==wys_wyniki)
+    {
+        for (int g = 0; g < 10; g++)
+        {
+            cout << wyniki[0][g] << endl;
+        }
+    }
+    else if(nazwa_uzytkownika[1]==wys_wyniki)
+    {
+        for (int g = 0; g < 10; g++)
+        {
+            cout << wyniki[1][g] << endl;
+        }
+    }
+    else if(nazwa_uzytkownika[2]==wys_wyniki)
+    {
+        for (int g = 0; g < 10; g++)
+        {
+            cout << wyniki[2][g] << endl;
+        }
+    }
+    else if(nazwa_uzytkownika[3]==wys_wyniki)
+    {
+        for (int g = 0; g < 10; g++)
+        {
+            cout << wyniki[3][g] << endl;
+        }
+    }
+    else if(nazwa_uzytkownika[4]==wys_wyniki)
+    {
+        for (int g = 0; g < 10; g++)
+        {
+            cout << wyniki[4][g] << endl;
+        }
+    }
+    else
+    {
+        cout << "Nie ma takiego uzytkownika!" << endl;
+    }
+
+    return 0;
+}
